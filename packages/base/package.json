@@ -1,0 +1,27 @@
+{
+  "name": "eslint-config-rchl-base",
+  "version": "0.0.1",
+  "main": "index.js",
+  "files": [
+    "CHANGELOG.md",
+    "index.js",
+    "README.md"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "fix": "eslint --fix .",
+    "version": "git add .",
+    "preversion": "npm run lint"
+  },
+  "eslintConfig": {
+    "extends": [
+      "./index.js"
+    ]
+  },
+  "peerDependencies": {
+    "eslint": "^8"
+  },
+  "devDependencies": {
+    "eslint": "^8.3.0"
+  }
+}
