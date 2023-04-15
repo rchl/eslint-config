@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-rchl-vue",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "main": "index.js",
   "files": [
     "CHANGELOG.md",
@@ -22,7 +22,7 @@
     "eslint": "^8.3.0"
   },
   "dependencies": {
-    "eslint-config-rchl-base": "^0.0.1",
+    "eslint-config-rchl-base": "^1.0.0",
     "eslint-plugin-vue": "^9.2.0"
   }
 }
