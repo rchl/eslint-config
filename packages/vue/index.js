@@ -1,3 +1,4 @@
+/** @type {import('eslint').Linter.Config} */
 module.exports = {
     extends: 'eslint-config-rchl-base',
     overrides: [
@@ -12,6 +13,7 @@ module.exports = {
                 'vue/component-name-in-template-casing': ['error', 'kebab-case', {
                     registeredComponentsOnly: false,
                 }],
+                'vue/custom-event-name-casing': ['error', 'kebab-case'],
                 'vue/eqeqeq': 'error',
                 'vue/html-closing-bracket-newline': 'off',
                 'vue/html-indent': ['error', 4],

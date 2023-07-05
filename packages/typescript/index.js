@@ -1,14 +1,22 @@
+/** @type {import('eslint').Linter.Config} */
 module.exports = {
     overrides: [
         {
             files: ['*.ts'],
-            extends: 'plugin:@typescript-eslint/recommended',
+            extends: [
+                'plugin:@typescript-eslint/strict-type-checked',
+                'plugin:@typescript-eslint/stylistic-type-checked',
+            ],
             rules: {
                 indent: 'off',
+                'no-array-constructor': 'off',
                 'no-extra-parens': 'off',
                 'no-extra-semi': 'off',
+                'no-loss-of-precision': 'off',
+                'no-undef': 'off',
                 'no-unused-vars': 'off',
                 quotes: 'off',
+                'require-await': 'off',
                 semi: 'off',
                 '@typescript-eslint/explicit-function-return-type': ['error', { allowExpressions: true }],
                 '@typescript-eslint/indent': [
@@ -39,6 +47,19 @@ module.exports = {
                 '@typescript-eslint/restrict-plus-operands': 'error',
                 '@typescript-eslint/semi': ['error', 'always'],
                 '@typescript-eslint/type-annotation-spacing': 'error',
+            },
+        },
+        {
+            files: ['*.vue'],
+            parserOptions: {
+                parser: {
+                    // Override script parser for `<script lang="ts">`
+                    ts: '@typescript-eslint/parser',
+                },
+            },
+            rules: {
+                'no-undef': 'off',
+                'no-unused-vars': 'off',
             },
         },
     ],

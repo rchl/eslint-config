@@ -2,6 +2,7 @@ module.exports = {
     extends: [
         './packages/base',
         './packages/typescript',
+        './packages/vue',
     ],
     overrides: [
         {

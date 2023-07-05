@@ -1,8 +1,9 @@
+/** @type {import('eslint').Linter.Config} */
 module.exports = {
     env: {
         browser: true,
         commonjs: true,
-        es2020: true,
+        es2022: true,
         node: true,
     },
     extends: 'eslint:recommended',

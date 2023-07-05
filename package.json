@@ -5,16 +5,19 @@
     "lint": "lerna run lint",
     "release": "lerna publish --no-private"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint"
     }
   },
-  "workspaces": [
-    "packages/*"
-  ],
   "devDependencies": {
     "husky": "^4.3.8",
-    "lerna": "^6.6.1"
+    "lerna": "^8.0.0"
+  },
+  "dependencies": {
+    "@types/eslint": "^8.44.8"
   }
 }
