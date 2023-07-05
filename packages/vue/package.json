@@ -19,10 +19,10 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^8.3.0"
+    "eslint": "^8.44.0"
   },
   "dependencies": {
     "eslint-config-rchl-base": "^1.0.0",
-    "eslint-plugin-vue": "^9.2.0"
+    "eslint-plugin-vue": "^9.15.1"
   }
 }
