@@ -18,6 +18,8 @@ module.exports = {
                 quotes: 'off',
                 'require-await': 'off',
                 semi: 'off',
+                '@typescript-eslint/consistent-type-assertions': 'off',
+                '@typescript-eslint/consistent-type-definitions': 'off',
                 '@typescript-eslint/explicit-function-return-type': ['error', { allowExpressions: true }],
                 '@typescript-eslint/indent': [
                     'error', 4, {
