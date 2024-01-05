@@ -5,7 +5,7 @@ Common base eslint rules.
 ## Installation
 
 ```sh
-$ npm i -D eslint-config-rchl-base eslint
+npm i -D eslint-config-rchl-base eslint
 ```
 
 ## Usage

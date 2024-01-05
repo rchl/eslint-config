@@ -3,7 +3,7 @@
 ## Installation
 
 ```sh
-$ npm i -D eslint-config-rchl-vue eslint
+npm i -D eslint-config-rchl-vue eslint
 ```
 
 ## Usage

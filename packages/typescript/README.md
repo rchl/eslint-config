@@ -8,7 +8,7 @@ Typescript eslint rules.
 2. Run
 
 ```sh
-$ npm i -D eslint-config-rchl-typescript typescript
+npm i -D eslint-config-rchl-typescript typescript
 ```
 
 3. Create `.eslintrc.js` configuration file in the root directory of your project.
