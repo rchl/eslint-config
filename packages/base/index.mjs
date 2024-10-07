@@ -65,11 +65,15 @@ export default [
                     ],
                     pathGroups: [
                         {
-                            pattern: '~@*/**',
+                            pattern: '~**',
                             group: 'sibling',
                         },
                         {
                             pattern: '~/**',
+                            group: 'sibling',
+                        },
+                        {
+                            pattern: '~@*/**',
                             group: 'sibling',
                         },
                     ],
