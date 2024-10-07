@@ -1,10 +1,12 @@
 {
   "name": "eslint-config-rchl-vue",
   "version": "2.0.0",
-  "main": "index.js",
+  "main": "index.mjs",
+  "types": "index.d.ts",
   "files": [
     "CHANGELOG.md",
-    "index.js",
+    "index.mjs",
+    "index.d.ts",
     "README.md"
   ],
   "scripts": {
@@ -13,16 +15,13 @@
     "version": "git add .",
     "preversion": "npm run lint"
   },
-  "eslintConfig": {
-    "extends": [
-      "./index.js"
-    ]
+  "peerDependencies": {
+    "eslint": "^9"
   },
   "devDependencies": {
-    "eslint": "^8.54.0"
+    "eslint": "^9.10.0"
   },
   "dependencies": {
-    "eslint-config-rchl-base": "^1.1.0",
-    "eslint-plugin-vue": "^9.19.2"
+    "eslint-plugin-vue": "^9.28.0"
   }
 }

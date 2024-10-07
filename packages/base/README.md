@@ -10,12 +10,13 @@ npm i -D eslint-config-rchl-base eslint
 
 ## Usage
 
-Add in `package.json`:
+Create `eslint.config.mjs` file in the root of the repo:
 
-```json
-  "eslintConfig": {
-    "extends": [
-      "eslint-config-rchl-base"
-    ]
-  },
+```js
+import base from 'eslint-config-rchl-base';
+
+/** @type {import('eslint').Linter.Config[]} */
+export default [
+    ...base,
+];
 ```

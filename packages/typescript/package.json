@@ -1,10 +1,12 @@
 {
   "name": "eslint-config-rchl-typescript",
   "version": "2.0.1",
-  "main": "index.js",
+  "main": "index.mjs",
+  "types": "index.d.ts",
   "files": [
     "CHANGELOG.md",
-    "index.js",
+    "index.mjs",
+    "index.d.ts",
     "README.md"
   ],
   "scripts": {
@@ -19,15 +21,15 @@
     ]
   },
   "peerDependencies": {
-    "eslint": "^8",
-    "typescript": "^4 || ^5"
+    "eslint": "^9",
+    "typescript": "^5"
   },
   "devDependencies": {
-    "eslint": "^8.54.0",
-    "typescript": "^5.3.2"
+    "eslint": "^9.10.0",
+    "typescript": "5.5.4"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.13.1",
-    "@typescript-eslint/parser": "^6.13.1"
+    "@stylistic/eslint-plugin-ts": "^2.8.0",
+    "typescript-eslint": "^8.6.0"
   }
 }
