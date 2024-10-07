@@ -68,11 +68,6 @@ export default [
                             pattern: '~/**',
                             group: 'sibling',
                         },
-                        {
-                            pattern: '@tidal/**',
-                            group: 'external',
-                            position: 'after',
-                        },
                     ],
                     distinctGroup: false,
                     pathGroupsExcludedImportTypes: ['builtin', 'object'],

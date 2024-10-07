@@ -22,6 +22,7 @@ export default /** @type {import('eslint').Linter.Config[]} */(tsEslint.config(
             '@stylistic/no-extra-semi': 'off',
             '@stylistic/quotes': 'off',
             '@stylistic/semi': 'off',
+            '@stylistic/space-before-function-paren': 'off',
             '@stylistic/ts/indent': [
                 'error', 4, {
                     SwitchCase: 1,
@@ -35,6 +36,7 @@ export default /** @type {import('eslint').Linter.Config[]} */(tsEslint.config(
             '@stylistic/ts/no-extra-semi': 'error',
             '@stylistic/ts/quotes': ['error', 'single', { avoidEscape: true, allowTemplateLiterals: false }],
             '@stylistic/ts/semi': ['error', 'always'],
+            '@stylistic/ts/space-before-function-paren': ['error', 'never'],
             '@stylistic/ts/type-annotation-spacing': 'error',
             '@typescript-eslint/explicit-function-return-type': ['error', { allowExpressions: true }],
             '@typescript-eslint/no-empty-object-type': ['error', { allowInterfaces: 'with-single-extends' }],
