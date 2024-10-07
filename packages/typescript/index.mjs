@@ -2,7 +2,7 @@ import tsParser from '@typescript-eslint/parser';
 import tsEslint from 'typescript-eslint';
 import stylisticTs from '@stylistic/eslint-plugin-ts';
 
-// Cast `tsEslint.config` return type since it defines its own `Config` types that are not compatible with
+// Cast `tsEslint.config` return type due to it defining its own `Config` types that is not compatible with
 // standard eslint types.
 export default /** @type {import('eslint').Linter.Config[]} */(tsEslint.config(
     // TS config doesn't restrict itself to typescript extensions, overriding vue parser.
