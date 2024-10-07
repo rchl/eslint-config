@@ -4,31 +4,22 @@ Typescript eslint rules.
 
 ## Installation
 
-1. First install either `eslint-config-rchl-base` or `eslint-config-rchl-vue`:
-2. Run
+1. Install `eslint-config-rchl-base`, `eslint-config-rchl-typescript` and `typescript` (if not installed already):
 
 ```sh
-npm i -D eslint-config-rchl-typescript typescript
+npm i -D eslint-config-rchl-base eslint-config-rchl-typescript typescript
 ```
 
-3. Create `.eslintrc.js` configuration file in the root directory of your project.
+2. Optionally install `eslint-config-rchl-vue`.
+3. Create `eslint.config.mjs` file in the root of the repo:
 
 ```js
-module.exports = {
-    extends: [
-        'eslint-config-rchl-vue',  // or 'eslint-config-rchl-base'
-        'eslint-config-rchl-typescript',
-    ],
-    overrides: [
-        {
-            files: ['*.ts'],
-            parserOptions: {
-                project: './tsconfig.json',
-                tsconfigRootDir: __dirname,
-            },
-        },
-    ],
-};
-```
+import base from 'eslint-config-rchl-base';
+import typescript from 'eslint-config-rchl-typescript';
 
-NOTE: When using typescript rules, eslint configuration *must* be located in a `.eslintrc.js` file since it's necessary to use `__dirname` constant which can't be used in JSON or Yaml context.
+/** @type {import('eslint').Linter.Config[]} */
+export default [
+    ...base,
+    ...typescript,
+];
+```
