@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-rchl-typescript",
-  "version": "3.0.3",
+  "version": "4.0.0",
   "main": "index.mjs",
   "types": "index.d.ts",
   "files": [
@@ -16,7 +16,6 @@
     "preversion": "pnpm run lint",
     "release": "pnpm version --tag-version-prefix=typescript@"
   },
-
   "peerDependencies": {
     "eslint": "^10",
     "typescript": "^5 || ^6"
