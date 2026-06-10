@@ -1,8 +1,7 @@
-// @ts-expect-error Missing type definitions
+import { defineConfig } from 'eslint/config';
 import pluginVue from 'eslint-plugin-vue';
 
-/** @type {import('eslint').Linter.Config[]} */
-export default [
+export default defineConfig([
     ...pluginVue.configs['flat/vue2-recommended'],
     {
         name: 'eslint-config-rchl-vue',
@@ -52,4 +51,4 @@ export default [
             'vue/v-slot-style': 'error',
         },
     },
-];
+]);

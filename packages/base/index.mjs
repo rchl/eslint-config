@@ -1,11 +1,20 @@
+import { defineConfig } from 'eslint/config';
 import globals from 'globals';
 import importPlugin from 'eslint-plugin-import-x';
-import stylisticJs from '@stylistic/eslint-plugin-js';
+import stylistic from '@stylistic/eslint-plugin';
 import js from '@eslint/js';
 
-/** @type {import('eslint').Linter.Config[]} */
-export default [
-    js.configs.recommended,
+export default defineConfig([
+    { files: ['**/*.js'], languageOptions: { globals: globals.browser } },
+    { files: ['**/*.js'], plugins: { js }, extends: ['js/recommended'] },
+    stylistic.configs.customize({
+        // the following options are the default values
+        indent: 4,
+        quotes: 'single',
+        semi: false,
+        blockSpacing: true,
+        commaDangle: 'always-multiline',
+    }),
     {
         name: 'eslint-config-rchl-base',
         languageOptions: {
@@ -18,8 +27,7 @@ export default [
             },
         },
         plugins: {
-            'import-x': /** @type {any} */(importPlugin),
-            '@stylistic': stylisticJs,
+            'import-x': importPlugin,
         },
         rules: {
             '@stylistic/array-bracket-spacing': 'error',
@@ -28,7 +36,7 @@ export default [
             '@stylistic/comma-spacing': 'error',
             '@stylistic/computed-property-spacing': 'error',
             '@stylistic/eol-last': 'error',
-            '@stylistic/func-call-spacing': 'error',
+            '@stylistic/function-call-spacing': 'error',
             '@stylistic/indent': [
                 'error', 4, {
                     SwitchCase: 1,
@@ -114,4 +122,4 @@ export default [
             },
         },
     },
-];
+]);

@@ -2,7 +2,7 @@
     "compilerOptions": {
         "noEmit": true,
         "target": "ES2022",
-        "module": "ES2022",
+        "module": "Node16",
         "esModuleInterop": true,
         "moduleResolution": "Node16",
         "allowJs": true,
@@ -16,5 +16,10 @@
         "lib": [
             "es2022",
         ],
+        "paths": {
+            "eslint-config-rchl-base": ["./packages/base/index.mjs"],
+            "eslint-config-rchl-typescript": ["./packages/typescript/index.mjs"],
+            "eslint-config-rchl-vue": ["./packages/vue/index.mjs"],
+        },
     },
 }
